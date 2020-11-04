@@ -8,6 +8,11 @@ let package = Package(
             name: "OHHTTPStubs",
             targets: [
                 "OHHTTPStubs",
+            ]
+        ),
+        .library(
+            name: "Mocktail",
+            targets: [
                 "Mocktail"
             ]
         ),
@@ -15,8 +20,7 @@ let package = Package(
             name: "OHHTTPStubsSwift",
             targets: [
                 "OHHTTPStubs",
-                "OHHTTPStubsSwift",
-                "Mocktail"
+                "OHHTTPStubsSwift"
             ]
         )
     ],
