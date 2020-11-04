@@ -8,13 +8,15 @@ let package = Package(
             name: "OHHTTPStubs",
             targets: [
                 "OHHTTPStubs",
+                "Mocktail"
             ]
         ),
         .library(
             name: "OHHTTPStubsSwift",
             targets: [
                 "OHHTTPStubs",
-                "OHHTTPStubsSwift"
+                "OHHTTPStubsSwift",
+                "Mocktail"
             ]
         )
     ],
@@ -24,6 +26,9 @@ let package = Package(
         .target(
             name: "OHHTTPStubs",
             dependencies: []),
+        .target(
+            name: "Mocktail",
+            dependencies: ["OHHTTPStubs"]),
         .testTarget(
             name: "OHHTTPStubsTests",
             dependencies: ["OHHTTPStubs"]),
